@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="style.css?version=6">
-    <script src="scripts/script.js?version=2"></script>
+    <script src="scripts/script.js?version=2" defer></script>
     <title>Сочисто! | Уборка квартир в Сочи</title>
     <link rel="icon" href="img/favicon.jpg">
+    <script src="scripts/bubbles.js?version=1" defer></script>
     
 </head>
 <body>
@@ -58,26 +59,6 @@
     <div id="services" class="container">
         <h1 class="text-accent">Какую уборку хотите?</h1>
         <div class="inner-container">
-            <!-- <div class="filters">
-                <div class="radio-wrapper">
-                    <input type="radio" id="all-types" checked="checked" name="type-filter"/>
-                    <label for="all-types" class="option s-button">
-                        Все услуги
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="by-case" name="type-filter" />
-                    <label for="by-case" class="option s-button">
-                        Уборка по случаю
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="by-space" name="type-filter"/>
-                    <label for="by-space" class="option s-button">
-                        Уборка по типу помещения
-                    </label>
-                </div>
-            </div> -->
             <div class="tiles">
                 <div onclick="checkRadio('general')" class="vertical tile case">
                     <div class="tile-image-container rounded">
@@ -153,13 +134,15 @@
                 Отправьте нашему специалисту несколько фотографий и видео вашего загрязнения, и мы сможем предметно оценить стоимость и сроки уборки и согласовать план действий по наведению порядка в вашем необычном случае.
             </p>
             <p>
-                Кроме этого при заключении долгосрочных договоров на убоорку делаем скидки.
+                Кроме этого при заключении долгосрочных договоров на уборку делаем скидки.
             </p>
             <a href="https://wa.me/+79628817225">
                 <div class="secondary button text-accent space-accent">
                     Оценить визуально
                 </div>
             </a>
+        </div>
+        <div class="bubble-container">
         </div>
     </div>
     <div id="prices" class="container bg2">
@@ -231,7 +214,7 @@
                             <small>
                                 от
                             </small>
-                            6000<small> ₽</small>
+                            4500<small> ₽</small>
                         </div>
                     </div>
                     <div class="details">
@@ -861,8 +844,6 @@
             </a>
         </div>
     </div>
-    <footer class="container">
-    </footer>
     <div class="dev bg2">
             <span class="white-text">Сделано:</span> <a class="white-text" href="https://maxnadeev.ru">Max Nadeev</a>
         </div>

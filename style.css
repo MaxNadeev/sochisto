@@ -193,10 +193,6 @@ a{
     font-family: 'Roboto';
 }
 
-#services, #prices{
-    
-}
-
 h1{
     font-size: 32px;
     padding: var(--h1-padding);
@@ -234,7 +230,6 @@ input[type="radio"] {
     color: var(--primary);
     border-radius: var(--full-radius);
     border: solid 1px var(--accent);
-    /* border-color: var(--secondary-btn); */
     white-space: nowrap;
 }
 
@@ -242,31 +237,6 @@ input[type="radio"]:checked + label{
     background:var(--accent);
     color: var(--bg);
 }
-
-/* input[type="radio"][id="by-case"]:checked ~ .space{
-    width:0;
-    height:0;
-    padding:0;
-    margin:0;
-    opacity:0;
-} */
-
-/* input[type="radio"][id="by-space"] + label {
-    margin-bottom: 300px;
-} */
-
-/* input[type="radio"][id="by-space"]:checked ~ .case {
-    width:0;
-    height:0;
-    padding:0;
-    margin:0;
-    opacity:0;
-} */
-
-/* input[type="radio"][id="all-types"]:checked + label {
-    background:var(--accent);
-    color: var(--bg);
-} */
 
 .tile{
     border-radius: var(--standart-radius);
@@ -309,7 +279,7 @@ input[type="radio"]:checked + label{
 }
 
 .space-accent{
-    margin: 50px 0;
+    margin: 50px 0 80px;
 }
 
 .bg2{
@@ -350,10 +320,6 @@ input[type="radio"]:checked + label{
     text-align: right;
 }
 
-.price-name{
-
-}
-
 small{
     color: var(--adding);
     font-size: 10px;
@@ -366,20 +332,6 @@ small{
 .rounded{
     border-radius: 50%;
 }
-
-.case, .space {
-    
-}
-
-.horisontal{
-
-}
-
-.list {
-
-}
-
-
 
 .flex-space{
     display: flex;
@@ -407,6 +359,44 @@ small{
     font-weight: 500;
 }
 
-.details{
+.bubble-container svg {
+	background-color: #00000000;
+    margin: -136px 0 -42px;
+    width: 100%;
+    height: 175px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 
+circle{
+    fill: var(--secondary-bg);
+}
+
+.bubble {
+	animation: rise 4s infinite linear;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes rise {
+	0% {
+		cy: 200;
+		opacity: 1;
+	}
+    50% {
+		opacity: 1;
+	}
+    95% {
+		opacity: .5;
+	}
+    98% {
+		opacity: .1;
+        r: 30;
+	}
+	100% {
+		cy: 100;
+		opacity: 0;
+        r: 50;
+	}
 }
