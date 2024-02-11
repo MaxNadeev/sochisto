@@ -1,0 +1,246 @@
+:root{
+    --test: #ccc;
+    --test2: #777;
+    --header-bg: #ffffffe0;
+    --accent: #753cc0;
+    --bg: #fff;
+    --secondary-btn: #dcd4e7;
+    --bg-transp: #ffffff00;
+    --general-margin: 20px;
+    --small-margin: 10px;
+    --h1-padding: 50px 0;
+    --primary: #000;
+    --bg-option: #6666ff;
+    --standart-radius: 12px;
+    --full-radius: 16px; 
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/RobotoFlex.ttf')
+    format("truetype-variations");
+    font-weight: 1 999;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#topheader{
+    position: relative;
+    justify-content: right;
+    z-index: 3;
+}
+
+.sticky{
+    visibility: hidden;
+    z-index: 30;
+    position: fixed;
+    background-color: var(--header-bg);
+    width: -webkit-fill-available;
+}
+
+.slider, .overlay::before{
+    height: 55vh;
+    width: 100%;
+}
+
+.overlay::before {
+    content: '';
+    z-index: 2;
+    display: block;
+    position: absolute;
+    background: linear-gradient(0deg, var(--bg) 0%, var(--bg-transp) 25%);
+  }
+
+.slider{
+    background-color: var(--test2);
+}
+
+p{
+    line-height: 25px;
+    font-size: 19px;
+    font-family: "Roboto"; 
+    font-weight: 400;
+    margin: 50px var(--general-margin);
+}
+
+.centespace{
+    text-align: center;
+}
+
+.logo-slider{
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    z-index: 3;
+    position: relative;
+}
+
+header{
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px var(--general-margin);
+    margin-bottom: -60px;
+}
+
+
+.header-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 155px;
+}
+
+#logo-header{
+    margin-top: 4px;
+}
+
+.call{
+    height: 30px;
+    width: 30px;
+    padding-top: 5px;
+}
+
+.text-accent{
+    font-family: 'Roboto';
+    font-weight: 811;
+    font-variation-settings: 
+        "wdth" 134.62, 
+        "opsz" 99.12, 
+        "GRAD" 31, 
+        "slnt" 0, 
+        "XTRA" 600, 
+        "XOPQ" 96.56, 
+        "YOPQ" 78.9, 
+        "YTLC" 514.56, 
+        "YTUC" 711.28, 
+        "YTAS" 749.45, 
+        "YTDE" -203.57, 
+        "YTFI" 737.84;
+}
+
+a{
+    text-decoration: none;
+}
+
+.cta{
+    background-color: var(--accent);
+    color: var(--bg);    
+}
+
+.secondary{
+    background-color: var(--secondary-btn);
+    color: var(--primary);
+}
+
+.button{
+    margin: 0 var(--general-margin) var(--general-margin);
+    padding: 16px 0;
+    border-radius: var(--standart-radius);
+    text-align: center;
+}
+
+.btn-icon{
+    margin: 0 5px -2px;
+}
+
+.s-button{
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-family: 'Roboto';
+}
+
+#services{
+    padding: var(--general-margin)
+}
+
+h1{
+    font-size: 32px;
+    padding: var(--h1-padding);
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+.container{
+    margin: var(--general-margin) 0 var(--general-margin); 
+}
+
+label{
+    text-align:center;
+    cursor:pointer;
+}
+
+.option{
+    margin: 0 var(--small-margin) var(--general-margin) 0;
+    background-color: var(--secondary-btn);
+    color: var(--primary);
+    border-radius: var(--full-radius);
+    white-space: nowrap;
+}
+
+.option:last-child{
+    margin-right: 0;
+}
+
+.initial{
+    background:var(--accent);
+    color: var(--bg);
+}
+
+input[type="radio"][id="by-case"]:checked + label {
+    background:var(--accent);
+    color: var(--bg);
+}
+
+input[type="radio"][id="by-case"]:checked ~ .space{
+    width:0;
+    height:0;
+    padding:0;
+    margin:0;
+    opacity:0;
+}
+
+input[type="radio"][id="by-space"]:checked + label {
+    background:var(--accent);
+    color: var(--bg);
+}
+
+input[type="radio"][id="by-space"]:checked ~ .case {
+    width:0;
+    height:0;
+    padding:0;
+    margin:0;
+    opacity:0;
+}
+
+input[type="radio"][id="all-types"]:checked + label {
+    background:var(--accent);
+    color: var(--bg);
+}
+
+.tile {
+    width:50%;
+    height:100px;
+    transition:all 1s;
+    margin:0.5%;
+    padding:0.5%;
+    border-radius: var(--standart-radius);
+}
+
+/* .tile:first-child{
+    margin-top: var(--general-margin);
+} */
+
+.case {
+    background:#6666ff;
+}
+.space {
+    background:#ff4466;
+}
