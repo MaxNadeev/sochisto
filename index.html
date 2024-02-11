@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?version=6">
+    <script src="scripts/script.js?version=2"></script>
     <title>Сочисто! | Уборка квартир в Сочи</title>
+    <link rel="icon" href="img/favicon.jpg">
+    
 </head>
 <body>
     <header id="topheader">
@@ -14,14 +17,11 @@
                 </div>
             </a>
     </header>
-    <header class="sticky">
+    <header class="fixed bg-blur">
         <a href="https://sochisto.ru">
-            <img id="logo-header" src="img/logo50.png">
+            <img id="logo-header" src="img/logo400.png">
         </a>
         <div class="header-controls">
-            <a href="tel:+79628817225">
-                    <img class="call" src="img/phone-753cc0.png">
-            </a>
             <a href="https://wa.me/+79628817225">
                 <div class="cta s-button text-accent">
                     Заказать
@@ -33,53 +33,838 @@
         <figure class="overlay">
         </figure>
         <div class="slider">
+            <img class="cover" src="img/slide-1.jpg">
         </div>
-        <div class="logo-slider">
-            <img src="img/logo80.png">
+        <div class="logo under-slider">
+            <img class="size-200" src="img/logo400.png">
         </div>
-        <p class="centespace">
-            Сделайте первый шаг к безупречной уборке и доверьтесь моей опытной команде. 
-            Мы обеспечим бережную уборку вашего помещения и  имущества.
+        <div class="container">
+            <p class="centespace">
+                Сделайте первый шаг к безупречной уборке и доверьтесь моей опытной команде. 
+                Мы обеспечим бережную уборку вашего помещения и  имущества.
+            </p>
+            <a href="https://wa.me/+79628817225">
+                <div class="cta button text-accent">
+                    Заказать уборку
+                </div>
+            </a>
+            <a href="#services">
+                <div class="secondary button text-accent">
+                    Услуги и цены
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="services" class="container">
+        <h1 class="text-accent">Какую уборку хотите?</h1>
+        <div class="inner-container">
+            <!-- <div class="filters">
+                <div class="radio-wrapper">
+                    <input type="radio" id="all-types" checked="checked" name="type-filter"/>
+                    <label for="all-types" class="option s-button">
+                        Все услуги
+                    </label>
+                </div>
+                <div class="radio-wrapper">
+                    <input type="radio" id="by-case" name="type-filter" />
+                    <label for="by-case" class="option s-button">
+                        Уборка по случаю
+                    </label>
+                </div>
+                <div class="radio-wrapper">
+                    <input type="radio" id="by-space" name="type-filter"/>
+                    <label for="by-space" class="option s-button">
+                        Уборка по типу помещения
+                    </label>
+                </div>
+            </div> -->
+            <div class="tiles">
+                <div onclick="checkRadio('general')" class="vertical tile case">
+                    <div class="tile-image-container rounded">
+                        <img class="rounded cover" src="img/general.jpg">
+                    </div>
+                    <span>
+                        Генеральная уборка
+                    </span>
+                </div>
+                <div onclick="checkRadio('maintenance')" class="vertical tile case">
+                    <div class="tile-image-container rounded">
+                        <img class="rounded cover" src="img/maintenance.jpg">
+                    </div>
+                    <span>
+                        Поддерживающая уборка
+                    </span>
+                </div>
+                <div onclick="checkRadio('kitchen')" class="vertical tile space">
+                    <div class="tile-image-container rounded">
+                        <img class="rounded cover" src="img/kitchen.jpg">
+                    </div>
+                    <span>
+                        Уборка на кухне
+                    </span>
+                </div>
+                <div onclick="checkRadio('repairs')" class="vertical tile case">
+                    <div class="tile-image-container rounded">
+                        <img class="rounded cover" src="img/repairs.jpg">
+                    </div>
+                    <span>
+                        Уборка после ремонта
+                    </span>
+                </div>
+                <div onclick="checkRadio('rooms')" class="vertical tile space">
+                    <div class="tile-image-container rounded">
+                        <img class="rounded cover" src="img/rooms1.jpg">
+                    </div>
+                    <span>
+                        Уборка в комнатах
+                    </span>
+                </div>
+                <div onclick="checkRadio('windows')" class="vertical tile case">
+                    <div class="tile-image-container rounded">
+                        <img class="rounded cover" src="img/windows.jpg">
+                    </div>
+                    <span>
+                        Мытьё окон
+                    </span>
+                </div>
+                <div onclick="checkRadio('laundery')" class="vertical tile case">
+                    <div class="tile-image-container rounded">
+                        <img class="rounded cover" src="img/laundery.jpg">
+                    </div>
+                    <span>
+                        Химчистка мебели и штор
+                    </span>
+                </div>
+                <div onclick="checkRadio('toilet')" class="vertical tile space">
+                    <div class="tile-image-container rounded">
+                        <img class="rounded cover" src="img/toilet.jpg">
+                    </div>
+                    <span>
+                        Уборка санузла
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="special" class="container bg1 white-text">
+        <div class="inner-container space-accent">
+            <h2 class="text-accent white-text">Если у Вас особый случай и его нет в списке</h2>
+            <p>
+                Отправьте нашему специалисту несколько фотографий и видео вашего загрязнения, и мы сможем предметно оценить стоимость и сроки уборки и согласовать план действий по наведению порядка в вашем необычном случае.
+            </p>
+            <p>
+                Кроме этого при заключении долгосрочных договоров на убоорку делаем скидки.
+            </p>
+            <a href="https://wa.me/+79628817225">
+                <div class="secondary button text-accent space-accent">
+                    Оценить визуально
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="prices" class="container bg2">
+        <h1 class="text-accent">Сколько стоит уборка?</h1>
+        <div>
+            <div class="filters sticky bg-blur">
+            <div class="radio-wrapper">
+                <input type="radio" id="all" checked="checked" name="price-filter"/>
+                <label for="all" class="option s-button" onclick="checkRadio('all')">
+                    Все
+                </label>
+            </div>
+            <div class="radio-wrapper">
+                <input type="radio" id="general" name="price-filter"/>
+                <label for="general" class="option s-button" onclick="checkRadio('general')">
+                    Генеральная
+                </label>
+            </div>
+            <div class="radio-wrapper">
+                <input type="radio" id="maintenance" name="price-filter"/>
+                <label for="maintenance" class="option s-button" onclick="checkRadio('maintenance')">
+                    Поддерживающая
+                </label>
+            </div>
+            <div class="radio-wrapper">
+                <input type="radio" id="repairs" name="price-filter"/>
+                <label for="repairs" class="option s-button" onclick="checkRadio('repairs')">
+                    После ремонта
+                </label>
+            </div>
+            <div class="radio-wrapper">
+                <input type="radio" id="windows" name="price-filter"/>
+                <label for="windows" class="option s-button" onclick="checkRadio('windows')">
+                    Мытьё окон
+                </label>
+            </div>
+            <div class="radio-wrapper">
+                <input type="radio" id="laundery" name="price-filter"/>
+                <label for="laundery" class="option s-button" onclick="checkRadio('laundery')">
+                    Мебель и шторы
+                </label>
+            </div>
+            <div class="radio-wrapper">
+                <input type="radio" id="kitchen" name="price-filter"/>
+                <label for="kitchen" class="option s-button" onclick="checkRadio('kitchen')">
+                    На кухне
+                </label>
+            </div>
+            <div class="radio-wrapper">
+                <input type="radio" id="rooms" name="price-filter"/>
+                <label for="rooms" class="option s-button" onclick="checkRadio('rooms')">
+                    В комнатах
+                </label>
+            </div>
+            <div class="radio-wrapper">
+                <input type="radio" id="toilet" name="price-filter"/>
+                <label for="toilet" class="option s-button" onclick="checkRadio('toilet')">
+                    Санузел
+                </label>
+            </div>
+            </div>
+            <div class="list">
+                <div class="tile general kitchen list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Генеральная уборка кухни
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            6000<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Моем снаружи всё полностью. Внутри шкафов, холодильник, духовка по запросу за доп. стоимость.
+                    </div>
+                </div>
+                <div class="tile general toilet list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Генеральная уборка совмещённого сан-узла
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            3000<small> ₽</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile general toilet list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Генеральная уборка раздельного сан-узла
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            4000<small> ₽</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile general list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Генеральная уборка квартиры
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            150<small> ₽/м<sup>2</sup></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile repairs list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Уборка после ремонта без мебели
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            140<small> ₽/м<sup>2</sup></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile repairs list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Уборка после ремонта с мебелью
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            190<small> ₽/м<sup>2</sup></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile repairs windows list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Мойка окон после ремонта
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            350<small> ₽<br>/створка</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile windows list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Сезонное мытьё окон
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            250<small> ₽<br>/створка</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile windows list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Мойка нестандартных окон/витражей
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            450<small> ₽<br>/створка</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile maintenance list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Влажная уборка
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            40<small> ₽/м<sup>2</sup></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile maintenance list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Поддерживающая уборка до 40 м<sup>2</sup>
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            2500<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Поддерживающая уборка производится после нашей генеральной уборки. Убираем с периодичностью 1 раз в 1-2 недели, используя Ваш пылесос. Если его нет, то привезём за +500 ₽ к стоимости уборки.
+                    </div>
+                </div>
+                <div class="tile maintenance list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Поддерживающая уборка на 40-60 м<sup>2</sup>
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            3000<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Поддерживающая уборка производится после нашей генеральной уборки. Убираем с периодичностью 1 раз в 1-2 недели, используя Ваш пылесос. Если его нет, то привезём за +500 ₽ к стоимости уборки.
+                    </div>
+                </div>
+                <div class="tile maintenance list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Поддерживающая уборка на 60-80 м<sup>2</sup>
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            3500<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Поддерживающая уборка производится после нашей генеральной уборки. Убираем с периодичностью 1 раз в 1-2 недели, используя Ваш пылесос. Если его нет, то привезём за +500 ₽ к стоимости уборки.
+                    </div>
+                </div>
+                <div class="tile maintenance list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Поддерживающая уборка на 80-100 м<sup>2</sup>
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            4000<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Поддерживающая уборка производится после нашей генеральной уборки. Убираем с периодичностью 1 раз в 1-2 недели, используя Ваш пылесос. Если его нет, то привезём за +500 ₽ к стоимости уборки.
+                    </div>
+                </div>
+                <div class="tile maintenance list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Поддерживающая уборка на 100 м<sup>2</sup> и более 
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            4500<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Поддерживающая уборка производится после нашей генеральной уборки. Убираем с периодичностью 1 раз в 1-2 недели, используя Ваш пылесос. Если его нет, то привезём за +500 ₽ к стоимости уборки.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Кресло, химчистка
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            700<small> ₽</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Стул, химчистка
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            250<small> ₽</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Кресло-кровать, химчистка
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            1500<small> ₽</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Диван 2-х местный, химчистка
+                        </div>
+                        <div class="price text-accent">
+                            2500<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Длина до 1,5 м.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Диван 3-х местный, химчистка
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            3000<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Длина до 2 м.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Угловой диван небольшой, химчистка
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            3800<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Длина до 2 м.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Угловой диван средний, химчистка
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            4000<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Длина до 3 м.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Матрас детский, химчистка
+                        </div>
+                        <div class="price text-accent">
+                            2000<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Чистим с двух сторон.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Матрас 1,5-спальный, химчистка
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            2500<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Чистим с двух сторон.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Матрас 2-спальный средний, химчистка с одной стороны
+                        </div>
+                        <div class="price text-accent">
+                            2000<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Ширина 140 − 160 см.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Матрас 2-спальный средний, химчистка с двух сторон
+                        </div>
+                        <div class="price text-accent">
+                            4000<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Ширина 140 − 160 см.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Матрас 2-спальный большой, химчистка с одной стороны
+                        </div>
+                        <div class="price text-accent">
+                            2500<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Ширина 180 - 220 см.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Матрас 2-спальный большой, химчистка с двух сторон
+                        </div>
+                        <div class="price text-accent">
+                            4500<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Ширина 180 - 220 см.
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Портьеры, химчистка на весу
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            280<small> ₽/м<sup>2</sup></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile laundery list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Тюль, химчистка на весу
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            200<small> ₽/м<sup>2</sup></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile kitchen list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Духовой шкаф внутри
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            1000<small> ₽/час</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Цена за 1ый час, второй и последующие: 600 ₽/час.
+                    </div>
+                </div>
+                <div class="tile kitchen list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Холодильник внутри
+                        </div>
+                        <div class="price text-accent">
+                            600<small> ₽/час</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile kitchen list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Микроволновка внутри
+                        </div>
+                        <div class="price text-accent">
+                            500<small> ₽</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile kitchen list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Посудомойка внутри
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            900<small> ₽</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile kitchen list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Шкафчики внутри кухни
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            200<small> ₽/шт</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile kitchen list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Глубокая чистка полов/швов
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            150<small> ₽/м<sup>2</sup></small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        Длина до 2 м.
+                    </div>
+                </div>
+                <div class="tile rooms list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Мытьё жалюзи
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            350<small> ₽/м<sup>2</sup></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile rooms list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Мытьё потолков
+                        </div>
+                        <div class="price text-accent">
+                            150<small> ₽/м<sup>2</sup></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile rooms list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Очистка сложных люстр
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            1000<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        С большим количеством мелких деталей.
+                    </div>
+                </div>
+                <div class="tile rooms list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Стирка штор/тюля
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            500<small> ₽</small>
+                        </div>
+                    </div>
+                    <div class="details">
+                        В стоимость входит снять, постирать, повесить шторы обратно.
+                    </div>
+                </div>
+                <div class="tile rooms list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Глажка белья
+                        </div>
+                        <div class="price text-accent">
+                            <small>
+                                от
+                            </small>
+                            500<small> ₽/час</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Заехать за ключами в Адлер
+                        </div>
+                        <div class="price text-accent">
+                            500<small> ₽</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile list-item">
+                    <div class="flex-space">
+                        <div class="price-name text-accent">
+                            Заехать за ключами в Сочи или Красную Поляну
+                        </div>
+                        <div class="price text-accent">
+                            1200<small> ₽</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="after-list">
+            <a href="https://wa.me/+79628817225">
+                <div class="cta button text-accent">
+                    Заказать уборку
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="closing" class="container">
+        <h1 class="text-accent">Оценим точнее по фото</h1>
+        <p>
+            Отправьте нам фотографии и видео с загрязнениями, мы проведём первичную оценку состояния и определим общий объем работ. 
+            Такой результат оценки точнее. 
+            Однако, для окончательного подсчёта стоимости, времени и разработки плана действий, 
+            нашему специалисту может понадобиться лично посмотреть и оценить состояние вашего помещения или загрязнения более детально. 
+            После этого предоставим вам точную информацию о цене и необходимых мерах по восстановлению.
         </p>
-        <a href="#services">
-            <div class="cta button text-accent">
-                Заказать уборку
+        <a href="https://wa.me/+79628817225">
+            <div class="secondary button text-accent">
+                <img class="icon size-15" src="img/whatsapp40.png">
+                Прислать фото
             </div>
         </a>
         <a href="https://wa.me/+79628817225">
-            <div class="secondary button text-accent">
-                <img class="btn-icon" src="img/whatsapp15.png">
-                Задать вопрос
+            <div class="cta button text-accent">
+                Оставить заявку
             </div>
         </a>
-    </div>
-    <div id="services">
-        <h1 class="text-accent">Какую уборку хотите?</h1>
-        <div class="container">
-            <input type="radio" id="all-types" checked="checked" name="type-filter"/>
-            <label for="all-types" class="option s-button">Все услуги</label>
-            <input type="radio" id="by-case" name="type-filter" />
-            <label for="by-case" class="option s-button">Уборка по случаю</label>
-            <input type="radio" id="by-space" name="type-filter"/>
-            <label for="by-space" class="option s-button">Уборка по типу помещения</label>
-            <input type="radio" id="by-space" name="type-filter"/>
-            
-            <div class="tile case">Генеральная уборка</div>
-            <div class="tile space">Уборка на кухне</div>
-            <div class="tile case">Уборка после ремонта</div>
-            <div class="tile case">Поддерживающая уборка</div>
-            <div class="tile space">Уборка в комнатах</div>
-            <div class="tile case">Мытьё окон</div>
-            <div class="tile case">Химчистка мебели и штор</div>
-            <div class="tile space">Уборка санузла</div>
-            <div class="tile case space">Особый случай</div>
-            <!-- дальше можно в сообщении написать "у меня мытьё окон" или "у меня особый случай"-->
-            123
+        <div class="flex-space">
+            <a href="https://instagram.com/">
+                <div class="secondary button btn-icon">
+                    <img class="icon size-20" src="img/instagram40.png">
+                </div>
+            </a>
+            <a href="https://vk.com/">
+                <div class="secondary button btn-icon">
+                    <img class="icon size-20" src="img/vk36.png">
+                </div>
+            </a>
+            <a href="https://t.me/+79628817225">
+                <div class="secondary button btn-icon">
+                    <img class="icon size-20" src="img/telegram40.png">
+                </div>
+            </a>
+            <a href="tel:+79628817225">
+                <div class="secondary button btn-icon">
+                    <img class="icon size-20" src="img/phone40.png">
+                </div>
+            </a>
         </div>
     </div>
-
-    
-    <footer>
+    <footer class="container">
     </footer>
+    <div class="dev bg2">
+            <span class="white-text">Сделано:</span> <a class="white-text" href="https://maxnadeev.ru">Max Nadeev</a>
+        </div>
 </body>
 </html>
