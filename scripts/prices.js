@@ -579,7 +579,6 @@ const json = {
 
 let priceList = document.getElementById("priceList");
 
-
 for (price of json.Prices) {
     let clss = '';
     for (value of price.classes){
@@ -625,5 +624,4 @@ for (price of json.Prices) {
     };
     div.innerHTML = text;
     priceList.appendChild(div);
-    // console.log(div);
 }

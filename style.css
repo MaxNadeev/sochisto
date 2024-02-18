@@ -31,6 +31,10 @@
     margin: 0;
 }
 
+.main-content{
+    max-width: 720px;
+}
+
 #topheader{
     position: relative;
     justify-content: right;
