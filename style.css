@@ -382,7 +382,14 @@ circle{
 
 .bubble {
 	animation: rise 4s infinite linear;
+    -o-animation: rise 4s infinite linear;
+    -moz-animation: rise 4s infinite linear;
+    -webkit-animation: rise 4s infinite linear;
 	animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+    
 	opacity: 0;
 }
 
