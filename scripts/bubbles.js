@@ -16,7 +16,7 @@ var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
 function addBubble(cssClass, cy){
     let cx = getRandomNumber(0, 100);
-    let r = getRandomNumber(5, 35);
+    let r = getRandomNumber(1, 35);
     
     let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     circle.setAttribute("class", `${cssClass}`);
