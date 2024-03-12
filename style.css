@@ -375,10 +375,22 @@ small{
 .bubble-container svg {
 	background-color: #00000000;
     margin: -136px 0 -42px;
-    width: 720px;
+    width: 100%;
+    max-width: 720px;
     height: 175px;
     position: absolute;
-    left: calc(50% - 360px);
+}
+
+@media (width > 720px){
+    .bubble-container svg {
+        left: calc(50% - 360px);
+    }
+}
+
+@media (width <= 720px){
+    .bubble-container svg {
+        left: 0;
+    }
 }
 
 circle{

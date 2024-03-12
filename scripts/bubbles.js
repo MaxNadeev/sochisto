@@ -1,4 +1,4 @@
-var screenWidth = window.innerWidth;
+var screenWidth = 720;
 var roundedScreenWidth = Math.round(screenWidth / 100) * 100;
 let number = roundedScreenWidth / 40;
 
