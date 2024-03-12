@@ -31,11 +31,15 @@
     margin: 0;
 }
 
-
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .main-content{
-    max-width: 720px;
     min-width: 395px;
+    max-width: 720px;
 }
 
 #topheader{
@@ -371,11 +375,10 @@ small{
 .bubble-container svg {
 	background-color: #00000000;
     margin: -136px 0 -42px;
-    width: 100%;
+    width: 720px;
     height: 175px;
     position: absolute;
-    left: 0;
-    right: 0;
+    left: calc(50% - 360px);
 }
 
 circle{
