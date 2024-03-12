@@ -20,6 +20,9 @@
                     <div class="call">
                         <img src="img/phone-white.png">
                     </div>
+                    <div id="phone" class="text-accent white-text">
+                        8 (962) 881-72-25
+                    </div>
                 </a>
         </header>
         <header class="fixed bg-blur">
@@ -35,104 +38,112 @@
             </div>
         </header>
         <div id="mainscreen">
-            <figure class="overlay">
+            <div class="slider-container">
+                <figure class="overlay">
             </figure>
             <div class="slider">
                 <img class="cover" src="img/slide-1.jpg">
             </div>
-            <div class="logo under-slider">
-                <img class="size-200" src="img/logo400.png">
             </div>
-            <div class="container">
+            <div class="logo under-slider">
+                    <img src="img/logo400.png">
+            </div>
+            <div class="container under-slider-container">
                 <p class="centespace">
                     Сделайте первый шаг к безупречной уборке и доверьтесь моей опытной команде. 
                     Мы обеспечим бережную уборку вашего помещения и  имущества.
                 </p>
-                <a href="https://wa.me/+79628817225">
-                    <div class="cta button text-accent">
-                        Заказать уборку
-                    </div>
-                </a>
-                <a href="#services">
-                    <div class="secondary button text-accent">
-                        Услуги и цены
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="services" class="container">
-            <h1 class="text-accent">Какую уборку хотите?</h1>
-            <div class="inner-container">
-                <div class="tiles">
-                    <div onclick="checkRadio('general')" class="vertical tile case">
-                        <div class="tile-image-container rounded">
-                            <img class="rounded cover" src="img/general.jpg">
+                <div class="buttons">
+                    <a href="https://wa.me/+79628817225">
+                        <div class="cta button text-accent">
+                            Заказать уборку
                         </div>
-                        <span>
-                            Генеральная уборка
-                        </span>
-                    </div>
-                    <div onclick="checkRadio('maintenance')" class="vertical tile case">
-                        <div class="tile-image-container rounded">
-                            <img class="rounded cover" src="img/maintenance.jpg">
+                    </a>
+                    <a href="#services">
+                        <div class="secondary button text-accent">
+                            Услуги и цены
                         </div>
-                        <span>
-                            Поддерживающая уборка
-                        </span>
-                    </div>
-                    <div onclick="checkRadio('kitchen')" class="vertical tile space">
-                        <div class="tile-image-container rounded">
-                            <img class="rounded cover" src="img/kitchen.jpg">
-                        </div>
-                        <span>
-                            Уборка на кухне
-                        </span>
-                    </div>
-                    <div onclick="checkRadio('repairs')" class="vertical tile case">
-                        <div class="tile-image-container rounded">
-                            <img class="rounded cover" src="img/repairs.jpg">
-                        </div>
-                        <span>
-                            Уборка после ремонта
-                        </span>
-                    </div>
-                    <div onclick="checkRadio('rooms')" class="vertical tile space">
-                        <div class="tile-image-container rounded">
-                            <img class="rounded cover" src="img/rooms1.jpg">
-                        </div>
-                        <span>
-                            Уборка в комнатах
-                        </span>
-                    </div>
-                    <div onclick="checkRadio('windows')" class="vertical tile case">
-                        <div class="tile-image-container rounded">
-                            <img class="rounded cover" src="img/windows.jpg">
-                        </div>
-                        <span>
-                            Мытьё окон
-                        </span>
-                    </div>
-                    <div onclick="checkRadio('laundery')" class="vertical tile case">
-                        <div class="tile-image-container rounded">
-                            <img class="rounded cover" src="img/laundery.jpg">
-                        </div>
-                        <span>
-                            Химчистка мебели и штор
-                        </span>
-                    </div>
-                    <div onclick="checkRadio('toilet')" class="vertical tile space">
-                        <div class="tile-image-container rounded">
-                            <img class="rounded cover" src="img/toilet.jpg">
-                        </div>
-                        <span>
-                            Уборка санузла
-                        </span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
+        <div id="services" class="container">
+            <div class="centered">
+                <h1 class="text-accent">Какую уборку хотите?</h1>
+                <div class="inner-container">
+                    <div class="tiles">
+                        <div onclick="checkRadio('general')" class="vertical tile case">
+                            <div class="tile-image-container rounded">
+                                <img class="rounded cover" src="img/general.jpg">
+                            </div>
+                            <span>
+                                Генеральная уборка
+                            </span>
+                        </div>
+                        <div onclick="checkRadio('maintenance')" class="vertical tile case">
+                            <div class="tile-image-container rounded">
+                                <img class="rounded cover" src="img/maintenance.jpg">
+                            </div>
+                            <span>
+                                Поддерживающая уборка
+                            </span>
+                        </div>
+                        <div onclick="checkRadio('kitchen')" class="vertical tile space">
+                            <div class="tile-image-container rounded">
+                                <img class="rounded cover" src="img/kitchen.jpg">
+                            </div>
+                            <span>
+                                Уборка на кухне
+                            </span>
+                        </div>
+                        <div onclick="checkRadio('repairs')" class="vertical tile case">
+                            <div class="tile-image-container rounded">
+                                <img class="rounded cover" src="img/repairs.jpg">
+                            </div>
+                            <span>
+                                Уборка после ремонта
+                            </span>
+                        </div>
+                        <div onclick="checkRadio('rooms')" class="vertical tile space">
+                            <div class="tile-image-container rounded">
+                                <img class="rounded cover" src="img/rooms1.jpg">
+                            </div>
+                            <span>
+                                Уборка в комнатах
+                            </span>
+                        </div>
+                        <div onclick="checkRadio('windows')" class="vertical tile case">
+                            <div class="tile-image-container rounded">
+                                <img class="rounded cover" src="img/windows.jpg">
+                            </div>
+                            <span>
+                                Мытьё окон
+                            </span>
+                        </div>
+                        <div onclick="checkRadio('laundery')" class="vertical tile case">
+                            <div class="tile-image-container rounded">
+                                <img class="rounded cover" src="img/laundery.jpg">
+                            </div>
+                            <span>
+                                Химчистка мебели и штор
+                            </span>
+                        </div>
+                        <div onclick="checkRadio('toilet')" class="vertical tile space">
+                            <div class="tile-image-container rounded">
+                                <img class="rounded cover" src="img/toilet.jpg">
+                            </div>
+                            <span>
+                                Уборка санузла
+                            </span>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            
+        </div>
         <div id="special" class="container bg1 white-text">
-            <div class="inner-container space-accent">
+            <div class="centered">
+                <div class="inner-container space-accent">
                 <h2 class="text-accent white-text">Если у Вас особый случай и его нет в списке</h2>
                 <p>
                     Отправьте нашему специалисту несколько фотографий и видео вашего загрязнения, и мы сможем предметно оценить стоимость и сроки уборки и согласовать план действий по наведению порядка в вашем необычном случае.
@@ -146,81 +157,87 @@
                     </div>
                 </a>
             </div>
+            </div>
+            
             <object class="bubble-container">
             </object>
         </div>
         <div id="prices" class="container bg2">
-            <h1 class="text-accent">Сколько стоит уборка?</h1>
-            <div>
-                <div class="filters sticky bg-blur">
-                <div class="radio-wrapper">
-                    <input type="radio" id="all" checked="checked" name="price-filter"/>
-                    <label for="all" class="option s-button" onclick="checkRadio('all')">
-                        Все
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="general" name="price-filter"/>
-                    <label for="general" class="option s-button" onclick="checkRadio('general')">
-                        Генеральная
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="maintenance" name="price-filter"/>
-                    <label for="maintenance" class="option s-button" onclick="checkRadio('maintenance')">
-                        Поддерживающая
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="repairs" name="price-filter"/>
-                    <label for="repairs" class="option s-button" onclick="checkRadio('repairs')">
-                        После ремонта
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="windows" name="price-filter"/>
-                    <label for="windows" class="option s-button" onclick="checkRadio('windows')">
-                        Мытьё окон
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="laundery" name="price-filter"/>
-                    <label for="laundery" class="option s-button" onclick="checkRadio('laundery')">
-                        Мебель и шторы
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="kitchen" name="price-filter"/>
-                    <label for="kitchen" class="option s-button" onclick="checkRadio('kitchen')">
-                        На кухне
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="rooms" name="price-filter"/>
-                    <label for="rooms" class="option s-button" onclick="checkRadio('rooms')">
-                        В комнатах
-                    </label>
-                </div>
-                <div class="radio-wrapper">
-                    <input type="radio" id="toilet" name="price-filter"/>
-                    <label for="toilet" class="option s-button" onclick="checkRadio('toilet')">
-                        Санузел
-                    </label>
-                </div>
-                </div>
-                <div class="list" id="priceList">
-                </div>
-            </div>
-            <div class="after-list">
-                <a href="https://wa.me/+79628817225">
-                    <div class="cta button text-accent">
-                        Заказать уборку
+            <div class="centered">
+                <h1 class="text-accent">Сколько стоит уборка?</h1>
+                <div>
+                    <div class="filters sticky bg-blur">
+                    <div class="radio-wrapper">
+                        <input type="radio" id="all" checked="checked" name="price-filter"/>
+                        <label for="all" class="option s-button" onclick="checkRadio('all')">
+                            Все
+                        </label>
                     </div>
-                </a>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="general" name="price-filter"/>
+                        <label for="general" class="option s-button" onclick="checkRadio('general')">
+                            Генеральная
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="maintenance" name="price-filter"/>
+                        <label for="maintenance" class="option s-button" onclick="checkRadio('maintenance')">
+                            Поддерживающая
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="repairs" name="price-filter"/>
+                        <label for="repairs" class="option s-button" onclick="checkRadio('repairs')">
+                            После ремонта
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="windows" name="price-filter"/>
+                        <label for="windows" class="option s-button" onclick="checkRadio('windows')">
+                            Мытьё окон
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="laundery" name="price-filter"/>
+                        <label for="laundery" class="option s-button" onclick="checkRadio('laundery')">
+                            Мебель и шторы
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="kitchen" name="price-filter"/>
+                        <label for="kitchen" class="option s-button" onclick="checkRadio('kitchen')">
+                            На кухне
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="rooms" name="price-filter"/>
+                        <label for="rooms" class="option s-button" onclick="checkRadio('rooms')">
+                            В комнатах
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="toilet" name="price-filter"/>
+                        <label for="toilet" class="option s-button" onclick="checkRadio('toilet')">
+                            Санузел
+                        </label>
+                    </div>
+                    </div>
+                    <div class="list" id="priceList">
+                    </div>
+                </div>
+                <div class="after-list">
+                    <a href="https://wa.me/+79628817225">
+                        <div class="cta button text-accent">
+                            Заказать уборку
+                        </div>
+                    </a>
+                </div>
             </div>
+            
         </div>
         <div id="closing" class="container">
-            <h1 class="text-accent">Оценим точнее по фото</h1>
+            <div class="centered">
+                <h1 class="text-accent">Оценим точнее по фото</h1>
             <p>
                 Отправьте нам фотографии и видео с загрязнениями, мы проведём первичную оценку состояния и определим общий объем работ. 
                 Такой результат оценки точнее. 
@@ -228,18 +245,20 @@
                 нашему специалисту может понадобиться лично посмотреть и оценить состояние вашего помещения или загрязнения более детально. 
                 После этого предоставим вам точную информацию о цене и необходимых мерах по восстановлению.
             </p>
-            <a href="https://wa.me/+79628817225">
-                <div class="secondary button text-accent">
-                    <img class="icon size-15" src="img/whatsapp40.png">
-                    Прислать фото
-                </div>
-            </a>
-            <a href="https://wa.me/+79628817225">
-                <div class="cta button text-accent">
-                    Оставить заявку
-                </div>
-            </a>
-            <div class="flex-space">
+            <div class="buttons">
+                <a href="https://wa.me/+79628817225">
+                    <div class="secondary button text-accent">
+                        <img class="icon size-15" src="img/whatsapp40.png">
+                        Прислать фото
+                    </div>
+                </a>
+                <a href="https://wa.me/+79628817225">
+                    <div class="cta button text-accent">
+                        Оставить заявку
+                    </div>
+                </a>
+            </div>
+            <div class="social">
                 <a href="https://instagram.com/">
                     <div class="secondary button btn-icon">
                         <img class="icon size-20" src="img/instagram40.png">
@@ -261,6 +280,8 @@
                     </div>
                 </a>
             </div>
+            </div>
+            
         </div>
         <div class="dev bg2">
             <span class="white-text">Сделано:</span> <a class="white-text" href="https://maxnadeev.ru">Max Nadeev</a>

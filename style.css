@@ -31,10 +31,13 @@
     margin: 0;
 }
 
-
+#mainscreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .main-content{
-    max-width: 720px;
     min-width: 395px;
 }
 
@@ -50,7 +53,6 @@
     position: fixed;
     background: var(--header-bg);
     width: -webkit-fill-available;
-    max-width: 680px;
 }
 
 .bg-blur{
@@ -58,13 +60,12 @@
     backdrop-filter: blur(4px);
 }
 
-.slider, .overlay::before{
-    height: 40vh;
-    width: 100%;
-}
-
 .slider{
     height: calc(40vh - 1px);
+}
+
+.slider, .overlay::before{
+    width: 100%;
 }
 
 .overlay::before {
@@ -72,7 +73,6 @@
     z-index: 2;
     display: block;
     position: absolute;
-    background: linear-gradient(0deg, var(--bg) 0%, var(--bg-transp) 25%);
   }
 
 .cover{
@@ -93,16 +93,14 @@ p{
     text-align: center;
 }
 
+.slider-container{
+    width: 100%;
+}
+
 .logo{
     display: flex;
     justify-content: center;
-}
-
-.under-slider{
-    margin-top: -120px;
-    margin-bottom: -20px;
-    z-index: 3;
-    position: relative;
+    flex-direction: column;
 }
 
 header{
@@ -168,7 +166,6 @@ a{
     background-color: var(--secondary-btn);
     color: var(--primary);
     position: relative;
-    z-index: 2;
 }
 
 .button{
@@ -188,10 +185,6 @@ a{
 
 .size-20{
     height: 20px;    
-}
-
-.size-200{
-    height: 200px;    
 }
 
 .s-button{
@@ -342,6 +335,10 @@ small{
     border-radius: 50%;
 }
 
+.social{
+    display: flex;
+}
+
 .flex-space{
     display: flex;
     justify-content: space-between;
@@ -415,4 +412,109 @@ circle{
 		opacity: 0;
         r: 50;
 	}
+}
+
+@media (min-width: 721px){
+    #phone{
+        display: block;
+    }
+    .call{
+        display: none;
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .button{
+        width: 350px;
+    }
+
+    .buttons a:not(:first-child){
+        margin-left: var(--general-margin);
+    }
+
+    .secondary{
+        z-index: 0;
+    }
+
+    .overlay::before {
+        background: linear-gradient(0deg, var(--bg) 25%, var(--bg-transp) 50%);
+    }
+
+    .slider, .overlay::before{
+        height: 100vh;
+    }
+
+    .under-slider-container{
+        max-width: 720px;
+        position: relative;
+        margin-top: -275px;
+        z-index: 100;
+    }
+
+    .under-slider{
+        z-index: 3;
+        position: absolute;
+        height: 90px;
+        width: 100px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .centered{
+        width: 720px;
+    }
+
+    #services, #special, #prices, #closing{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social{
+        justify-content: flex-start;
+    }
+
+    .btn-icon{
+        width: 50px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 720px){
+
+    #phone{
+        display: none;
+    }
+
+    .buttons{
+        display: block;
+    }
+    .overlay::before {
+        background: linear-gradient(0deg, var(--bg) 0%, var(--bg-transp) 25%);
+    }
+
+    .secondary{
+        z-index: 2;
+    }
+
+    .slider, .overlay::before{
+        height: 40vh;
+    }
+
+    .under-slider{
+        margin-top: -120px;
+        margin-bottom: -20px;
+        z-index: 3;
+        position: relative;
+        height: 200px;
+        width: 220px;
+    }
+
+    .social {
+        justify-content: space-between;
+    }
 }
