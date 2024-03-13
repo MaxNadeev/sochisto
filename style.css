@@ -40,7 +40,9 @@ body{
 .main-content{
     min-width: 395px;
     max-width: 720px;
-    overflow: hidden;
+}
+
+#mainscreen{
 }
 
 #header-panel{
@@ -76,6 +78,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
 }
 
 .utp{
