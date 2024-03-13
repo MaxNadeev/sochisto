@@ -11,23 +11,28 @@
     <title>Сочисто! | Уборка квартир в Сочи</title>
     <link rel="icon" href="img/favicon.jpg">
     <script src="scripts/bubbles.js?version=3" defer></script>
-    
 </head>
 <body>
     <div class='main-content'>
         <header id="topheader">
-            <a href="tel:+79628817225">
-                    <div class="call">
-                        <img src="img/phone-white.png">
+            <div id="header-panel">
+                <div>
+                    <img class="size-200" src="img/logo400-white.png">
+                </div>
+                <a href="tel:+79628817225">
+                    <div id="phone" class="text-accent white-text">
+                        8 (962) 881-72-25
                     </div>
                 </a>
+            </div>
+            
         </header>
         <header class="fixed bg-blur">
             <a href="https://sochisto.ru">
                 <img id="logo-header" src="img/logo400.png">
             </a>
             <div class="header-controls">
-                <a href="https://wa.me/+79654816857">
+                <a href="https://wa.me/+79628117225">
                     <div class="cta s-button text-accent">
                         Заказать
                     </div>
@@ -37,20 +42,25 @@
         <div id="mainscreen">
             <figure class="overlay">
             </figure>
+            <figure class="layer-overlay">
+            </figure>
             <div class="slider">
-                <img class="cover" src="img/Lisa.jpg">
-            </div>
-            <div class="logo under-slider">
-                <img class="size-200" src="img/logo400.png">
+                <div class="container">
+                    <div class="inner-container utp">
+                        <h1 class="text-accent white-text place5 fade-in-up">
+                        Успейте забрать скидку 10% на первую уборку
+                        </h1>
+                        <p class="white-text place5 fade-in-up">
+                            Сделайте первый шаг к безупречной уборке. 
+                            Мы обеспечим бережную уборку вашего помещения и  имущества.
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="container">
-                <p class="centespace">
-                    Сделайте первый шаг к безупречной уборке. 
-                    Мы обеспечим бережную уборку вашего помещения и  имущества.
-                </p>
-                <a href="https://wa.me/+79654816857">
+                <a href="https://wa.me/+79628117225">
                     <div class="cta button text-accent">
-                        Заказать уборку
+                        Заказать
                     </div>
                 </a>
                 <a href="#services">
@@ -61,7 +71,7 @@
             </div>
         </div>
         <div id="services" class="container">
-            <h1 class="text-accent">Какую уборку хотите?</h1>
+            <h1 class="text-accent">Какую уборку желаете?</h1>
             <div class="inner-container">
                 <div class="tiles">
                     <div onclick="checkRadio('general')" class="vertical tile case">
@@ -135,12 +145,9 @@
             <div class="inner-container space-accent">
                 <h2 class="text-accent white-text">Если у Вас особый случай и его нет в списке</h2>
                 <p>
-                    Отправьте нашему специалисту несколько фотографий и видео вашего загрязнения, и мы сможем предметно оценить стоимость и сроки уборки и согласовать план действий по наведению порядка в вашем необычном случае.
+                    При заключении долгосрочных договоров на уборку делаем <span class="text-accent">СКИДКИ</span>.
                 </p>
-                <p>
-                    Кроме этого при заключении долгосрочных договоров на уборку делаем <span class="text-accent">СКИДКИ</span>.
-                </p>
-                <a href="https://wa.me/+79654816857">
+                <a href="https://wa.me/+79628117225">
                     <div class="secondary button text-accent space-accent">
                         Оценить визуально
                     </div>
@@ -212,7 +219,7 @@
                 </div>
             </div>
             <div class="after-list">
-                <a href="https://wa.me/+79654816857">
+                <a href="https://wa.me/+79628117225">
                     <div class="cta button text-accent">
                         Заказать уборку
                     </div>
@@ -222,21 +229,54 @@
         <div id="closing" class="container">
             <h1 class="text-accent">Оценим точнее по фото</h1>
             <p>
-                Отправьте нам фотографии и видео с загрязнениями, мы проведём первичную оценку состояния и определим общий объем работ. 
-                Такой результат оценки точнее. 
+                Отправьте нам фотографии и видео с загрязнениями, мы проведём первичную оценку и определим общий объем работ.  
                 Однако, для окончательного подсчёта стоимости, времени и разработки плана действий, 
                 нашему специалисту может понадобиться лично посмотреть и оценить состояние вашего помещения или загрязнения более детально. 
                 После этого предоставим вам точную информацию о цене и необходимых мерах по восстановлению.
             </p>
-            <a href="https://wa.me/+79654816857">
+            <a href="https://wa.me/+79628117225">
                 <div class="secondary button text-accent">
                     <img class="icon size-15" src="img/whatsapp40.png">
                     Прислать фото
                 </div>
             </a>
-            <a href="https://wa.me/+79654816857">
+            <a href="https://wa.me/+79628117225">
                 <div class="cta button text-accent">
                     Оставить заявку
+                </div>
+            </a>
+        </div>
+
+        <div class="container" id="gallery">
+            <h1 class="text-accent">
+                Фотографии процесса
+            </h1>
+            <p>
+                Здесь вы можете увидеть процесс в действии. 
+                посмотрите своими глазами, как умелые руки наших клинеров,
+                превращают грязь и беспорядок в идеальный порядок. 
+                С нами каждая комната становится сверкающей и уютной.
+            </p>
+            <div class="photo-grid">
+                <img class="photo" src="img/Gallery/photo1.jpg" alt="Photo 1">
+                <img class="photo" src="img/Gallery/photo11.jpg" alt="Photo 11">
+                <img class="photo" src="img/Gallery/photo3.jpg" alt="Photo 3">
+                <img class="photo" src="img/Gallery/photo2.jpg" alt="Photo 5">
+                <img class="photo" src="img/Gallery/photo7.jpg" alt="Photo 7">
+                <img class="photo" src="img/Gallery/photo8.jpg" alt="Photo 8">
+                <img class="photo" src="img/Gallery/photo9.jpg" alt="Photo 9">
+                <img class="photo" src="img/Gallery/photo10.jpg" alt="Photo 10">
+                <img class="photo" src="img/Gallery/photo4.jpg" alt="Photo 4">
+                <img class="photo" src="img/Gallery/photo6.jpg" alt="Photo 6">
+            </div>
+            <h1 class="text-accent">
+                Доверьте нам уборку вашей квартиры
+            </h1>
+        </div>
+        <div class="container" id="social">
+            <a href="https://wa.me/+79628117225">
+                <div class="cta button text-accent">
+                    Заказать клинеров
                 </div>
             </a>
             <div class="flex-space">

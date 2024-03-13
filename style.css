@@ -42,10 +42,13 @@ body{
     max-width: 720px;
 }
 
-#topheader{
-    position: relative;
-    justify-content: right;
-    z-index: 3;
+#header-panel{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
 }
 
 .fixed{
@@ -62,22 +65,52 @@ body{
     backdrop-filter: blur(4px);
 }
 
-.slider, .overlay::before{
-    height: 40vh;
+.slider, .overlay::before, .layer-overlay::before{
+    height: 70vh;
     width: 100%;
 }
 
 .slider{
-    height: calc(40vh - 1px);
+    height: calc(70vh - 1px);
+    background-image: url("img/Lisa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.utp{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 60vh;
+    width: 100%;
+}
+
+.place5{
+    z-index: 5;
+    margin: 0;
+}
+
+.fade-in-up{
+    animation: fadeInUp 1s ease forwards;
 }
 
 .overlay::before {
     content: '';
-    z-index: 2;
+    z-index: 1;
     display: block;
     position: absolute;
     background: linear-gradient(0deg, var(--bg) 0%, var(--bg-transp) 25%);
-  }
+}
+
+.layer-overlay::before {
+    content: '';
+    z-index: 0;
+    display: block;
+    position: absolute;
+    background: #00000080;
+    height: calc(70vh - 1px);
+}
 
 .cover{
     width: 100%;
@@ -195,7 +228,8 @@ a{
 }
 
 .size-200{
-    height: 200px;    
+    height: 80px;
+    margin-top: 55px;   
 }
 
 .s-button{
@@ -346,6 +380,24 @@ small{
     border-radius: 50%;
 }
 
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 5 columns for the first row */
+    grid-template-rows: auto auto; /* 2 rows */
+    gap: 10px; /* spacing between photos */
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* to ensure the image covers the entire area */
+}
+
+/* Make the last photo take up 2 columns */
+.photo:nth-child(11) {
+    grid-column: span 2;
+}
+
 .flex-space{
     display: flex;
     justify-content: space-between;
@@ -385,11 +437,17 @@ small{
     .bubble-container svg {
         left: calc(50% - 360px);
     }
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (width <= 720px){
     .bubble-container svg {
         left: 0;
+    }
+    .photo-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -431,3 +489,15 @@ circle{
         r: 50;
 	}
 }
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
