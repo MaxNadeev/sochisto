@@ -13,6 +13,8 @@
     --h1-padding: 50px 0;
     --primary: #000;
     --bg-option: #6666ff;
+    --bg-active: #421c75;
+    --success: #b2ff9e;
     --detail-text: #555;
     --adding: #777;
     --standart-radius: 12px;
@@ -118,17 +120,29 @@ body{
     object-fit: cover;
 }
 
-p{
+.text{
     line-height: 25px;
     font-size: 19px;
     font-family: "Roboto"; 
     font-weight: 400;
+}
+
+p{
     margin: 50px 0;
 }
 
-.centespace{
-    text-align: center;
+.input{
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid var(--secondary-btn);
+    border-radius: 10px;
+    margin-top: var(--general-margin);
 }
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
 
 .logo{
     display: flex;
@@ -212,7 +226,18 @@ a{
     margin: 0 0 var(--general-margin);
     padding: 16px 0;
     border-radius: var(--standart-radius);
-    text-align: center; 
+    text-align: center;
+    user-select: none;
+}
+
+.button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.button:active{
+    background-color: var(--bg-active);
+    box-shadow: none;
 }
 
 .icon{
@@ -296,7 +321,7 @@ input[type="radio"]:checked + label{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    min-width: 50%; 
+    min-width: 50%;
 }
 
 .tile span{
@@ -382,18 +407,17 @@ small{
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 5 columns for the first row */
-    grid-template-rows: auto auto; /* 2 rows */
-    gap: 10px; /* spacing between photos */
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto auto;
+    gap: 10px;
 }
 
 .photo {
     width: 100%;
     height: auto;
-    object-fit: cover; /* to ensure the image covers the entire area */
+    object-fit: cover;
 }
 
-/* Make the last photo take up 2 columns */
 .photo:nth-child(11) {
     grid-column: span 2;
 }
@@ -406,6 +430,7 @@ small{
 .btn-icon{
     width: 50px;
     height: 20px;
+    margin-bottom: 0px;
 }
 
 .infooter{
@@ -425,7 +450,7 @@ small{
 }
 
 .bubble-container svg {
-	background-color: #00000000;
+    background-color: #00000000;
     margin: -136px 0 -42px;
     width: 100%;
     max-width: 720px;
@@ -462,7 +487,7 @@ circle{
 }
 
 .bubble {
-	animation: rise 4s infinite linear;
+    animation: rise 4s infinite linear;
     -o-animation: rise 4s infinite linear;
     -moz-animation: rise 4s infinite linear;
     -webkit-animation: rise 4s infinite linear;
@@ -474,23 +499,33 @@ circle{
 	opacity: 0;
 }
 
+.centered{
+    text-align: center;
+}
+
+#success{
+    background-color: var(--success);
+    border-radius: 10px;
+    display: none;
+}
+
 @keyframes rise {
-	0% {
-		cy: 200;
+    0% {
+        cy: 200;
 		opacity: 1;
 	}
     50% {
-		opacity: 1;
+        opacity: 1;
 	}
     95% {
-		opacity: .5;
+        opacity: .5;
 	}
     98% {
-		opacity: .1;
+        opacity: .1;
         r: 20;
 	}
 	100% {
-		cy: 100;
+        cy: 100;
 		opacity: 0;
         r: 50;
 	}
@@ -498,12 +533,11 @@ circle{
 
 @keyframes fadeInUp {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
 }
-  
