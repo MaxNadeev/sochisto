@@ -139,6 +139,10 @@ p{
     margin-top: var(--general-margin);
 }
 
+#name{
+    margin-top: 0;
+}
+
 :focus::-webkit-input-placeholder {
     color: transparent;
 }

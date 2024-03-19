@@ -46,34 +46,35 @@ function checkRadio(elementId) {
     scrollToFilters();
 }
 
-document.getElementById('submit').addEventListener('click', function() {
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    
-    if (name.trim() === '') {
-        console.log('Please fill out NAME!');
-        document.getElementById('name').style.border = '2px solid red'
-        return;
-    }
-    if (phone.trim() === '') {
-        console.log('Please fill out PHONE!');
-        document.getElementById('phone').style.border = '2px solid red'
-        return;
-    }
-     else {
-        console.log('Name:', name);
-        console.log('Phone:', phone);
 
-        document.getElementById('name').disabled = true;
-        document.getElementById('phone').disabled = true;
+document.querySelectorAll('.clientForm').forEach( (e) => {
+    document.getElementById('submit').addEventListener('click', function() {
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
         
-        document.getElementById('name').value = '';
-        document.getElementById('phone').value = '';
+        if (name.trim() === '') {
+            //Please fill out NAME!
+            document.getElementById('name').style.border = '2px solid red'
+            return;
+        }
+        if (phone.trim() === '') {
+            //Please fill out PHONE!
+            document.getElementById('phone').style.border = '2px solid red'
+            return;
+        }
+        else {
+            
+            const dataToSend = {
+                name: name,
+                phone: phone
+            }
+            sendEmail(dataToSend)
+            // sendDataToNode(dataToSend);
+            
 
-        document.getElementById('hide-after-success').style.display = 'none';
-        document.getElementById('success').style.display = 'block';
-    };
-});
+        };
+    })
+})
 
 document.getElementById('again').addEventListener('click', function() {
     console.log('again click');
@@ -82,3 +83,46 @@ document.getElementById('again').addEventListener('click', function() {
     document.getElementById('hide-after-success').style.display = 'block';
     document.getElementById('success').style.display = 'none';
 })
+
+function showSuccess(){
+    document.getElementById('name').disabled = true;
+    document.getElementById('phone').disabled = true;
+    
+    document.getElementById('name').value = '';
+    document.getElementById('phone').value = '';
+    
+    document.getElementById('hide-after-success').style.display = 'none';
+    document.getElementById('success').style.display = 'block';
+}
+
+function sendEmail(dataToSend){
+    const mailPath = '../mail.php'
+            let request = new XMLHttpRequest();
+            var params = JSON.stringify(dataToSend);
+
+            request.open('POST', mailPath, true)
+            request.setRequestHeader('Content-Type', 'application/json');
+            request.send(params);
+            request.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    showSuccess();
+                }
+            }
+}
+
+// function sendDataToNode(data) {
+//     // fetch('https://sochisto-bot-lizatravel.amvera.io:80/sendData', {
+//     fetch('95.26.169.129:80/sendData', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(data)
+//     })
+//     .then(response => {
+//         console.log('Data sent to Node.js');
+//     })
+//     .catch(error => {
+//         console.error('Error sending data:', error);
+//     });
+// };

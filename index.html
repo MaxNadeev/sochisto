@@ -5,8 +5,8 @@
     <script src="scripts/ya.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <noscript><div><img src="https://mc.yandex.ru/watch/96480520" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <link rel="stylesheet" href="style.css?version=8">
-    <script src="scripts/script.js?version=5" defer></script>
+    <link rel="stylesheet" href="style.css?version=10">
+    <script src="scripts/script.js?version=12" defer></script>
     <script src="./scripts/prices.js" defer></script>
     <title>Сочисто! | Уборка квартир в Сочи</title>
     <link rel="icon" href="img/favicon.jpg">
@@ -75,9 +75,6 @@
                 <h1 class="text-accent">Оставьте заявку</h1>
                 <div id="success" class="fade-in-up">
                     <div class="container">
-                        <h2 class="centered text-accent">
-                            Спасибо
-                        </h2>
                         <p class="centered text">
                             Мы свяжемся с вами в самое ближайшее время для уточнения деталей и записи на уборку.
                         </p>
@@ -90,11 +87,26 @@
                     <p class="text">
                         Вы сможете узнать всю необходимую информацию и забронировать время уборки.
                     </p>
-                    <form id="clientForm">
+
+                    <!-- <form enctype="multipart/form-data" action="/settings/uploadFile" method="post" class="dropzone" id="my-awesome-dropzone">
+                        <input type="text" name="x" value="kittens">
+                        <input type="text" name="y" value="puppies">
+                        </form> -->
+
+
+                    <form class="clientForm" enctype="multipart/form-data" action="mail.php"  method="post">
+
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="project_name" value="Сочисто">
+                        <input type="hidden" name="admin_email" value="e-max@bk.ru">
+                        <input type="hidden" name="form_subject" value="Новая заявка на сайте">
+                        <!-- END Hidden Required Fields -->
+
+
                         <input class="text input" type="text" id="name" name="name" placeholder="Ваше имя" required>
                         <input class="text input" type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
                         <div class="after-list">
-                            <div id="submit" class="cta button text-accent inner-container">
+                            <div id="submit" class="cta button text-accent inner-container" action="mail.php" method="post">
                                 Перезвоните мне
                             </div>
                         </div>
