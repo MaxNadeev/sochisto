@@ -38,5 +38,25 @@ if ($mail_result) {
     echo "Email успешно отправлен 📧";
 } else {
     echo "Что-то пошло не так при отправке письма 🙁";
-}
+};
+
+$conststxt = file_get_contents('consts.txt');
+$consts = explode("\n", $conststxt);
+
+$apiToken = substr($consts[0], 0, -1);
+$owner = $consts[1];
+$dev = $consts[2];
+
+function sendTelegram($chat_id, $message, $apiToken) {
+	$data = [
+		'chat_id' => $chat_id,
+		'text' => $message,
+		'parse_mode' => 'HTML'
+	];
+	$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?".http_build_query($data));
+};
+
+sendTelegram($owner, $message, $apiToken);
+sendTelegram($dev, $message, $apiToken);
+
 ?>

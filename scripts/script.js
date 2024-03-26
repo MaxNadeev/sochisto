@@ -53,31 +53,24 @@ document.querySelectorAll('.clientForm').forEach( (e) => {
         const phone = document.getElementById('phone').value;
         
         if (name.trim() === '') {
-            //Please fill out NAME!
             document.getElementById('name').style.border = '2px solid red'
             return;
         }
         if (phone.trim() === '') {
-            //Please fill out PHONE!
             document.getElementById('phone').style.border = '2px solid red'
             return;
         }
         else {
-            
             const dataToSend = {
                 name: name,
                 phone: phone
             }
-            sendEmail(dataToSend)
-            // sendDataToNode(dataToSend);
-            
-
+            send(dataToSend)
         };
     })
 })
 
 document.getElementById('again').addEventListener('click', function() {
-    console.log('again click');
     document.getElementById('name').disabled = false;
     document.getElementById('phone').disabled = false;
     document.getElementById('hide-after-success').style.display = 'block';
@@ -95,8 +88,8 @@ function showSuccess(){
     document.getElementById('success').style.display = 'block';
 }
 
-function sendEmail(dataToSend){
-    const mailPath = '../mail.php'
+function send(dataToSend){
+    const mailPath = '../sender.php'
             let request = new XMLHttpRequest();
             var params = JSON.stringify(dataToSend);
 
@@ -109,20 +102,3 @@ function sendEmail(dataToSend){
                 }
             }
 }
-
-// function sendDataToNode(data) {
-//     // fetch('https://sochisto-bot-lizatravel.amvera.io:80/sendData', {
-//     fetch('95.26.169.129:80/sendData', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(data)
-//     })
-//     .then(response => {
-//         console.log('Data sent to Node.js');
-//     })
-//     .catch(error => {
-//         console.error('Error sending data:', error);
-//     });
-// };
