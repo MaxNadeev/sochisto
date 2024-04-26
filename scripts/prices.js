@@ -4,64 +4,16 @@ const json = {
     "Prices": 
     [
         {
-            "name": "Генеральная уборка кухни",
+            "name": "Генеральная уборка",
             "classes": 
             [
                 {
                     "class": "general"
-                },
-                {
-                    "class": "kitchen"
                 }
             ],
             "prefix": "от",
             "price": 1000,
             "suffix": "₽/час",
-            "details": "Моем снаружи всё полностью. Внутри шкафов, холодильник, духовка по запросу за доп. стоимость."
-        },
-        {
-            "name": "Генеральная уборка совмещённого сан-узла",
-            "classes": 
-            [
-                {
-                    "class": "general"
-                },
-                {
-                    "class": "toilet"
-                }
-            ],
-            "prefix": "от",
-            "price": 3000,
-            "suffix": "₽",
-            "details": ""
-        },
-        {
-            "name": "Генеральная уборка раздельного сан-узла",
-            "classes": 
-            [
-                {
-                    "class": "general"
-                },
-                {
-                    "class": "toilet"
-                }
-            ],
-            "prefix": "от",
-            "price": 4000,
-            "suffix": "₽",
-            "details": ""
-        },
-        {
-            "name": "Генеральная уборка квартиры",
-            "classes": 
-            [
-                {
-                    "class": "general"
-                }
-            ],
-            "prefix": "от",
-            "price": 150,
-            "suffix": "₽/м<sup>2</sup>",
             "details": ""
         },
         {
